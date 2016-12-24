@@ -36,6 +36,7 @@
   "You may want to make sure your words are backwards"
   (= "olleh" (string/reverse "hello"))
 
+<<<<<<< HEAD
   "Maybe you want to find the index of the first occurence of a substring"
   (= 0 (.indexOf "hello world" "hello"))
 
@@ -44,6 +45,16 @@
 
   "But when something doesn't exist, it turns up negative"
   (= -1 (.indexOf "hello world" "bob"))
+=======
+  "Maybe you want to find the index of the first occurrence of a substring"
+  (= 0 (string/index-of "hello world" __))
+
+  "Or maybe the last index of the same"
+  (= __ (string/last-index-of "hello world, hello" "hello"))
+
+  "But when something doesn't exist, nothing is found"
+  (= __ (string/index-of "hello world" "bob"))
+>>>>>>> master
 
   "Sometimes you don't want whitespace cluttering the front and back"
   (= "hello world" (string/trim "  \nhello world \t \n"))
